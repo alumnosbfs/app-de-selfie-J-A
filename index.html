@@ -1,0 +1,66 @@
+<!--Descarga la actividad 1 del estudiante para iniciar-->
+<html>
+    <head>
+       <title>Mi Aplicación de Selfies</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="style.css" rel="stylesheet">
+
+<!--agrega el script parara llamar a la camara web -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+
+</head>
+ 
+<body>
+    <div class="container">
+    <center>
+        <!--Añade una etiqueta anchor para descargar la selfie:-->
+        <a href="" id="link" download="myslefie.png"></a>
+        <!--Dejamos href=”” vacío porque lo actualizaremos con el enlace de la selfie
+desde JavaScript en las próximas clases.-->
+        <h1>Aplicación de voz para tomar selfies
+            <!--agrega la imagen del estudiante-->
+<img id="logo_img" src="selfie astronauta.png" alt="">
+        </h1>
+        <hr>
+        <h4 style="color:red;">Haz clic en permitir cuando aparezca la ventana emergente, después de dar una orden de voz.</h4>
+        
+        <div class="form-group">
+            <h3>Di "selfie"</h3>
+            <label>Tu salida de voz: </label>
+            <!--Agrega un textarea para contener el texto convertido de nuestro audio-->
+            <textarea id="textbox" class="form-control" readonly="true"></textarea>
+
+        </div>
+
+<!--Ahora añade un botón “Iniciar”:-->
+<button class="btn btn-primary" onclick="start()">Iniciar</button>
+        <p>Haz clic en el botón Iniciar</p>
+
+        <label>Tu cámara: </label>
+
+        <!--Ahora añade un div que se utilizará para reflejar la salida de la cámara:
+-->
+<div id="camera"></div>
+
+        <br>
+
+        <label>Tu selfie aparecerá aquí: </label>
+<!--Ahora añade un div para contener la selfie que tome la cámara web:
+-->
+<div id="result"></div>
+    <button onclick="save()" class="btn btn-primary">guardar</button>
+    </center>
+    </div>
+<!--Liga el script:-->
+    <script src="main.js"></script>
+</body>
+</html>
